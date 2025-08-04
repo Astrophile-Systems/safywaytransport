@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/client-project",
             "index": "src/index.html",
+            "baseHref": "/client-project/",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
