@@ -1,0 +1,1 @@
+import{$a as o,Na as n,_a as s,nb as i}from"./chunk-KSLFQXVR.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-services"]],decls:2,vars:0,template:function(e,r){e&1&&(s(0,"p"),i(1,"services works!"),o())},encapsulation:2})};export{c as ServicesComponent};
