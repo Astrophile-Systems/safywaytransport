@@ -1,0 +1,64 @@
+<!-- <section id="pricing" class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Transparent Pricing</h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Choose from our carefully crafted packages designed to meet different needs and budgets. All prices include
+            fuel, insurance, and professional driver services.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div *ngFor="let pkg of packages"
+               [class]="'relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg hover-card ' + (pkg.popular ? 'ring-2 ring-amber-500 dark:ring-amber-400 scale-105' : '')">
+            <div *ngIf="pkg.popular" class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="bg-amber-500 dark:bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </span>
+            </div>
+            <div class="text-center pb-8 p-6 border-b border-gray-200 dark:border-gray-700">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">{{ pkg.name }}</h3>
+              <div class="mb-4">
+                <span class="text-4xl font-bold text-amber-600 dark:text-amber-400">{{ pkg.price }}</span>
+                <span class="text-gray-600 dark:text-gray-400">{{ pkg.period }}</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300">{{ pkg.description }}</p>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-3 mb-8">
+                <li *ngFor="let feature of pkg.features" class="flex items-center">
+                  <svg class="h-5 w-5 text-amber-500 dark:text-amber-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span class="text-gray-700 dark:text-gray-300">{{ feature }}</span>
+                </li>
+              </ul>
+              <button
+                [class]="'w-full py-2 rounded-md transition-colors text-white ' + (pkg.popular ? 'bg-amber-600 hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600' : 'bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600')">
+                Choose This Package
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 max-w-4xl mx-auto border dark:border-gray-700">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Special Hajj & Umrah Discounts</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <div class="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">15%</div>
+                <div class="text-gray-600 dark:text-gray-300">Weekly Bookings</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">25%</div>
+                <div class="text-gray-600 dark:text-gray-300">Monthly Bookings</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">10%</div>
+                <div class="text-gray-600 dark:text-gray-300">Group Bookings (5+ cars)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->

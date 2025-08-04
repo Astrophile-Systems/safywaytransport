@@ -1,0 +1,54 @@
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">Frequently Asked <span
+          class="text-[#f6be55]">Questions</span>
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Find answers to common questions about our car rental services for Hajj and Umrah pilgrims.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4">
+      <div *ngFor="let faq of faqs; let i = index"
+        class="overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+        <div class="p-0">
+          <button (click)="toggleFAQ(i)"
+            class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+            <h3 class="font-semibold text-gray-800 dark:text-white pr-4">{{ faq.question }}</h3>
+            <svg *ngIf="openIndex === i" class="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+            </svg>
+            <svg *ngIf="openIndex !== i" class="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div *ngIf="openIndex === i" class="px-6 pb-6">
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="mt-16 text-center">
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 max-w-2xl mx-auto border dark:border-gray-700">
+        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Still have questions?</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-6">
+          Our customer support team is here to help you with any additional questions or concerns.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+966501234567"
+            class="bg-amber-600 hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block">
+            Call Us Now
+          </a>
+          <a href="mailto:info@hajjumrahcars.com"
+            class="bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 px-6 py-3 rounded-lg font-semibold transition-colors inline-block">
+            Send Email
+          </a>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>

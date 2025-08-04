@@ -1,0 +1,110 @@
+// Core Values Component Styles
+.curved-line-left,
+.curved-line-right {
+  transition: all 0.3s ease;
+  
+  path {
+    transition: stroke 0.3s ease;
+  }
+}
+
+// Hover effects for value cards
+.group:hover {
+  .curved-line-left path,
+  .curved-line-right path {
+    stroke: #f59e0b;
+    stroke-width: 3;
+  }
+}
+
+// Icon container animations
+.icon-container {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.3);
+  }
+}
+
+// Responsive curved lines
+@media (max-width: 1024px) {
+  .curved-line-left,
+  .curved-line-right {
+    display: none;
+  }
+}
+
+// Dark mode adjustments
+@media (prefers-color-scheme: dark) {
+  .curved-line-left path,
+  .curved-line-right path {
+    stroke: #4b5563;
+  }
+  
+  .group:hover {
+    .curved-line-left path,
+    .curved-line-right path {
+      stroke: #fbbf24;
+    }
+  }
+}
+
+// Animation for curved lines
+@keyframes draw-line {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.curved-line-animated {
+  path {
+    stroke-dashoffset: 100;
+    animation: draw-line 2s ease-in-out forwards;
+  }
+}
+
+// Mobile spacing adjustments
+@media (max-width: 768px) {
+  .value-card {
+    margin-bottom: 2rem;
+  }
+  
+  .icon-background {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .icon-container-inner {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+// Floating animation for decorative elements
+@keyframes float-up-down {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.floating-decoration {
+  animation: float-up-down 3s ease-in-out infinite;
+}
+
+// Pulse animation variations
+.pulse-delayed-1 {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 0.2s;
+}
+
+.pulse-delayed-2 {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 0.4s;
+}

@@ -1,0 +1,92 @@
+<section class="w-full py-12 md:py-24 lg:py-32 bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Header with Title and Navigation -->
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-4xl font-bold text-gray-900">
+        Choose Your <span class="text-[#e6a43b]">Car</span>
+      </h2>
+      <div class="flex space-x-4">
+        <button (click)="scrollLeft()"
+          class="w-10 h-10 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center transition-colors hover:bg-gray-300"
+          aria-label="Scroll left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button (click)="scrollRight()"
+          class="w-10 h-10 rounded-full bg-[#e6a43b] text-white flex items-center justify-center transition-colors hover:bg-[#e6a43b]"
+          aria-label="Scroll right">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Slider Section with unique amber background shape -->
+    <div class="relative  rounded-tl-[100px] rounded-br-[100px] rounded-tr-lg rounded-bl-lg py-16 px-8 overflow-hidden">
+      <div #scrollContainer class="flex space-x-8 overflow-x-scroll scrollbar-hide snap-x snap-mandatory pb-4">
+        <!-- <div
+          *ngFor="let vehicle of vehicles"
+          class="flex-shrink-0 w-[280px] snap-center bg-white rounded-xl shadow-md overflow-hidden"
+        >
+          <img
+            src="fleet-car-demo.png"
+            alt="Toyota Yaris"
+            width="300"
+            height="200"
+            class="w-full h-48 object-cover"
+            style="aspect-ratio: 300/200"
+          />
+          <div class="p-6 text-center">
+            <h3 class="text-xl font-semibold text-amber-600 mb-2">
+              {{ vehicle.name }}
+            </h3>
+            <p class="text-gray-700 text-sm">{{ vehicle.description }}</p>
+          </div>
+        </div> -->
+        <div *ngFor="let vehicle of vehicles"
+          class="flex-shrink-0 w-[280px] border rounded-lg shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+          <div class="text-center border-b p-4">
+            <p class="text-sm font-semibold text-[#e6a43b] uppercase">
+              {{ vehicle.category }}
+            </p>
+            <h3 class="text-lg font-medium text-gray-800">
+              {{ vehicle.name }}
+            </h3>
+          </div>
+
+          <div class="flex justify-center items-center p-4">
+            <img [src]="vehicle.image" alt="{{ vehicle.name }}" class="h-32 object-contain" />
+          </div>
+
+          <div class="text-center px-4 pb-4">
+            <p class="text-gray-700">
+              <span class="font-semibold">Passengers:</span>
+              {{ vehicle.passengers }}
+            </p>
+            <p class="text-gray-700">
+              <span class="font-semibold">Suitcases:</span>
+              {{ vehicle.suitcases }}
+            </p>
+          </div>
+
+          <div
+            class="text-center bg-[#FFD87D] text-white font-semibold py-6 rounded-b-lg cursor-pointer hover:bg-[#e6a43b] transition">
+            View Detail
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- See All Button -->
+    <div class="text-center mt-12">
+      <button class="bg-[#e6a43b] hover:bg-[#e6a43b] text-white text-lg px-8 py-3 rounded-md transition-colors"
+        (click)="navigateToAllFleets()">
+        See all
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<div class="container p-10 mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
+    <div
+      *ngFor="let vehicle of vehicles"
+      class="border rounded-lg shadow-md hover:shadow-lg transition duration-300"
+    >
+      <div class="text-center border-b p-4">
+        <p class="text-sm font-semibold text-yellow-600 uppercase">
+          {{ vehicle.category }}
+        </p>
+        <h3 class="text-lg font-medium text-gray-800">
+          {{ vehicle.name }}
+        </h3>
+      </div>
+
+      <div class="flex justify-center items-center p-4">
+        <img
+          [src]="vehicle.image"
+          alt="{{ vehicle.name }}"
+          class="h-32 object-contain"
+        />
+      </div>
+
+      <div class="text-center px-4 pb-4">
+        <p class="text-gray-700">
+          <span class="font-semibold">Passengers:</span>
+          {{ vehicle.passengers }}
+        </p>
+        <p class="text-gray-700">
+          <span class="font-semibold">Suitcases:</span>
+          {{ vehicle.suitcases }}
+        </p>
+      </div>
+
+      <div
+        class="text-center bg-[#FFD87D] text-white font-semibold py-6 rounded-b-lg cursor-pointer hover:bg-yellow-600 transition"
+      >
+        View Detail
+      </div>
+    </div>
+  </div>
+</div>

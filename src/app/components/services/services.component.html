@@ -1,0 +1,78 @@
+<section id="services" class="py-20">
+  <div class="container mx-auto px-4">
+    <!-- Header Section with Split Layout -->
+    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+      <div>
+        <p class="text-[#F6BE55] font-semibold mb-2 uppercase tracking-wide">
+          Our Services
+        </p>
+        <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+          Designed for <span class="text-yellow-500">Pilgrims'</span><br />
+          Comfort
+        </h2>
+      </div>
+      <div class="flex items-center">
+        <p class="text-lg text-gray-600 leading-relaxed">
+          We offer reliable and comfortable transportation services to meet the
+          needs of every pilgrim. Whether you're traveling solo, with family, or
+          in a group — our fleet, drivers, and support team are here to ensure
+          your sacred journey is smooth and worry-free.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4">
+      <div *ngFor="let service of servicesOne"
+        class="bg-white rounded-xl border border-[#ffdc89] p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col">
+
+        <div class="w-14 h-14 bg-[#ffdc89] rounded-lg flex items-center justify-center mb-4">
+          <img [src]="service.icon" alt="icon" class="h-10 w-10 object-contain">
+        </div>
+
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-500 leading-relaxed text-sm">
+          {{ service.description }}
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 px-4">
+      <!-- This empty div creates the space on the left for large screens -->
+      <div class="hidden lg:block"></div>
+      <div *ngFor="let service of servicesTwo"
+        class="bg-white rounded-xl border border-[#ffdc89] p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col">
+        <div class="w-14 h-14 bg-[#ffdc89] rounded-lg flex items-center justify-center mb-4">
+          <img [src]="service.icon" alt="icon" class="h-10 w-10 object-contain">
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-500 leading-relaxed text-sm">
+          {{ service.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistics Section -->
+  <div class="relative mt-[150px]">
+    <div class="bg-[#e6a43b] md:rounded-r-3xl p-12 max-w-6xl relative overflow-hidden">
+      <!-- Curved decoration -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-[##e6a43b] rounded-full opacity-20 transform translate-x-32 -translate-y-32">
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 relative z-10">
+        <div *ngFor="let stat of statistics" class="text-center md:text-left ml-[30px]">
+          <div class="text-3xl lg:text-4xl font-semibold text-white mb-2 ">
+            {{ stat.number }}
+          </div>
+          <div class="text-lg text-white/90">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+<section class="py-16 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <p class="text-amber-500 dark:text-amber-400 font-medium text-lg mb-4">Journey Highlights</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-6">
+        Milestones in 
+        <span class="text-amber-500 dark:text-amber-400">Serving</span> 
+        the Guests of 
+        <span class="text-amber-500 dark:text-amber-400">Allah</span>
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        From our humble beginnings to serving thousands of pilgrims, our journey has been one of faith, dedication, and continuous growth. Each milestone marks a step forward in our mission to make Umrah and Hajj travel more accessible, comfortable, and spiritually fulfilling. Explore how far we've come—and where we're headed next.
+      </p>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="relative">
+      <!-- Milestones Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4">
+        <div 
+          *ngFor="let milestone of milestones; let i = index" 
+          class="relative flex flex-col items-center text-center group"
+        >
+          <!-- Timeline Dot with Connecting Lines -->
+          <div class="relative z-10 mb-6">
+            <!-- Left Dotted Line (except for first item) -->
+            <div 
+              *ngIf="i > 0"
+              class="hidden lg:block absolute top-1/2 right-full w-24 xl:w-32 h-0.5 transform -translate-y-1/2 dotted-line dark:opacity-60"
+            ></div>
+            
+            <!-- Right Dotted Line (except for last item) -->
+            <div 
+              *ngIf="i < milestones.length - 1"
+              class="hidden lg:block absolute top-1/2 left-full w-24 xl:w-32 h-0.5 transform -translate-y-1/2 dotted-line dark:opacity-60"
+            ></div>
+            
+            <!-- Circular Icon -->
+            <div 
+              class="w-16 h-16 rounded-full flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 relative z-20"
+              [ngClass]="{
+                'bg-amber-500 text-white shadow-lg shadow-amber-500/30': milestone.isActive,
+                'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400': !milestone.isActive
+              }"
+            >
+              {{ milestone.icon }}
+            </div>
+            
+            <!-- Active Indicator -->
+            <div 
+              *ngIf="milestone.isActive"
+              class="absolute -inset-2 rounded-full border-2 border-amber-300 dark:border-amber-600 animate-pulse z-10"
+            ></div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-3">
+            <h3 
+              class="text-lg font-bold transition-colors duration-300"
+              [ngClass]="{
+                'text-amber-600 dark:text-amber-400': milestone.isActive,
+                'text-gray-800 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400': !milestone.isActive
+              }"
+            >
+              {{ milestone.title }}
+            </h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              {{ milestone.description }}
+            </p>
+          </div>
+
+          <!-- Mobile Timeline Line -->
+          <div 
+            *ngIf="i < milestones.length - 1"
+            class="lg:hidden absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gray-200 dark:bg-gray-700"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

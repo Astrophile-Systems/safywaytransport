@@ -1,0 +1,56 @@
+/* Custom dropdown styles */
+.dropdown-container {
+  position: relative;
+}
+
+/* Scrollbar styling for dropdown */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #f6be55;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #e6a43b;
+}
+
+/* Focus trap for accessibility */
+.dropdown-menu {
+  scrollbar-width: thin;
+  scrollbar-color: #f6be55 #f1f1f1;
+}
+
+/* Animation for dropdown */
+.dropdown-menu {
+  animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom focus styles */
+.dropdown-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(246, 190, 85, 0.2);
+}
+
+/* Hover effect enhancement */
+.dropdown-option:hover {
+  transform: translateX(2px);
+}

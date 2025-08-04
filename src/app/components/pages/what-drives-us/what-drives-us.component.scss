@@ -1,0 +1,75 @@
+// Component specific styles
+.mission-card {
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.vision-card {
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(245, 158, 11, 0.3);
+  }
+}
+
+// Decorative animations
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.floating-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+// Background pattern animations
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-pattern {
+  animation: rotate 20s linear infinite;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .card-padding {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .card-description {
+    font-size: 1rem;
+  }
+}
+
+// Dark mode specific styles
+@media (prefers-color-scheme: dark) {
+  .mission-card {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: rgba(75, 85, 99, 0.3);
+  }
+  
+  .vision-card {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  }
+}

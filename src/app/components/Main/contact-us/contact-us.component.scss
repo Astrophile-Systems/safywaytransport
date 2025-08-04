@@ -1,0 +1,125 @@
+/* Phone input flag styling */
+::ng-deep .iti {
+  width: 100% !important;
+}
+
+::ng-deep .iti__flag-container {
+  border-right: 1px solid #d1d5db !important;
+}
+
+::ng-deep .iti__selected-flag {
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+}
+
+::ng-deep .iti__selected-flag:hover {
+  background-color: rgba(246, 190, 85, 0.1);
+}
+
+::ng-deep .iti__country-list {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+::ng-deep .iti__country {
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+::ng-deep .iti__country:hover {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+::ng-deep .iti__country.iti__highlight {
+  background-color: #f6be55 !important;
+  color: #1f2937 !important;
+}
+
+::ng-deep .iti input[type="tel"] {
+  border: none !important;
+  padding: 12px 16px;
+  width: 100%;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Custom dropdown styling */
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select option {
+  padding: 8px 12px;
+  background-color: white;
+  color: #374151;
+}
+
+select option:hover {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+select option:checked {
+  background-color: #f6be55 !important;
+  color: #1f2937 !important;
+}
+
+/* Input number styling */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Date and time inputs */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.6);
+  cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 2px rgba(246, 190, 85, 0.2) !important;
+}
+
+/* Button hover animation */
+button:hover svg {
+  transform: translateX(2px);
+}
+
+:host ::ng-deep .iti__selected-flag.dropdown-toggle {
+  width: 7rem !important;
+}
+
+:host ::ng-deep .iti__tel-input {
+  padding-left: 115px !important;
+  border-radius: 8px !important;
+}
+
+:host ::ng-deep .iti input[type="tel"] {
+  border: 1px solid rgb(156 163 175 / 60%) !important;
+}
+// .iti.separate-dial-code.iti__selected-flag,
+// .iti.separate-dial-code.iti--allow-dropdown.iti-sdc-2.iti__selected-flag,
+// .iti.separate-dial-code.iti--allow-dropdown.iti-sdc-3.iti__selected-flag,
+// .iti.separate-dial-code.iti--allow-dropdown.iti-sdc-4.iti__selected-flag {
+//   width: 105px !important;
+// }

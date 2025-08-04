@@ -1,0 +1,84 @@
+<section class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Content Column -->
+      <div class="space-y-8">
+        <!-- Our Story Label -->
+        <div class="space-y-2">
+          <p class="text-amber-500 dark:text-amber-400 font-medium text-lg tracking-wide">Our Story</p>
+        </div>
+
+        <!-- Main Heading -->
+        <div class="space-y-4">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white leading-tight">
+            Where Every 
+            <span class="text-amber-500 dark:text-amber-400">{{ founderVision.highlighted }}</span> 
+            is a Step<br>
+            Towards Serving 
+            <span class="text-amber-500 dark:text-amber-400">Allah's</span><br>
+            Guests
+          </h2>
+        </div>
+
+        <!-- Description -->
+        <div class="space-y-6">
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            Founded with the mission to make Hajj & Umrah travel stress-free for every pilgrim, our team brings decades of experience and heartfelt service to ensure your sacred journey is smooth and respectful.
+          </p>
+        </div>
+
+        <!-- Founder's Vision Section -->
+        <div class="space-y-4">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white">Founder's Vision</h3>
+          
+          <div class="relative">
+            <!-- Quote styling with decorative elements -->
+            <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 dark:border-amber-400 p-6 rounded-r-lg">
+              <blockquote class="text-lg text-gray-700 dark:text-gray-300 italic leading-relaxed">
+                "{{ founderVision.quote }}"
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="relative">
+        <div class="relative z-10">
+          <!-- Main Image with decorative torn paper effect -->
+          <div class="relative overflow-hidden rounded-lg shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              alt="Kaaba and Masjid al-Haram in Makkah during Hajj pilgrimage"
+              class="w-full h-[500px] object-cover"
+            />
+            
+            <!-- Torn paper effect overlay -->
+            <div class="absolute inset-0">
+              <!-- Top torn edge -->
+              <div class="absolute top-0 left-0 right-0 h-8 bg-white dark:bg-gray-900" 
+                   style="clip-path: polygon(0 0, 100% 0, 95% 100%, 90% 80%, 85% 100%, 80% 70%, 75% 100%, 70% 60%, 65% 100%, 60% 90%, 55% 100%, 50% 80%, 45% 100%, 40% 70%, 35% 100%, 30% 90%, 25% 100%, 20% 60%, 15% 100%, 10% 80%, 5% 100%, 0 70%);">
+              </div>
+              
+              <!-- Bottom torn edge -->
+              <div class="absolute bottom-0 left-0 right-0 h-8 bg-white dark:bg-gray-900" 
+                   style="clip-path: polygon(0 100%, 5% 0, 10% 80%, 15% 0, 20% 60%, 25% 0, 30% 90%, 35% 0, 40% 70%, 45% 0, 50% 80%, 55% 0, 60% 90%, 65% 0, 70% 60%, 75% 0, 80% 70%, 85% 0, 90% 80%, 95% 0, 100% 100%);">
+              </div>
+              
+              <!-- Right torn edge -->
+              <div class="absolute top-0 bottom-0 right-0 w-8 bg-white dark:bg-gray-900" 
+                   style="clip-path: polygon(100% 0, 0 5%, 80% 10%, 0 15%, 60% 20%, 0 25%, 90% 30%, 0 35%, 70% 40%, 0 45%, 80% 50%, 0 55%, 90% 60%, 0 65%, 60% 70%, 0 75%, 70% 80%, 0 85%, 80% 90%, 0 95%, 100% 100%);">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Background decorative element -->
+        <div class="absolute -top-6 -right-6 w-full h-full bg-amber-100 dark:bg-amber-900/30 rounded-lg -z-10"></div>
+        
+        <!-- Floating accent element -->
+        <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full opacity-20 blur-xl"></div>
+      </div>
+    </div>
+  </div>
+</section>

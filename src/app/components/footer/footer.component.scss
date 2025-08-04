@@ -1,0 +1,88 @@
+@media screen and (min-width: 767px) {
+  .topbar-content {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
+  }
+}
+
+// .hero-section {
+//   background-color: #e59b2a;
+//   padding: 4rem 1rem;
+//   display: flex;
+//   justify-content: center;
+//   width: 90vw;
+//   margin: 0 auto;
+//   clip-path: polygon(0 0, 87% 0, 100% 100%, 0% 100%);
+
+
+//   .hero-container {
+//     max-width: 1200px;
+//     color: white;
+//     padding: 2rem 3rem;
+//     position: relative;
+//     border-top-left-radius: 2rem;
+//     border-bottom-left-radius: 2rem;
+//     clip-path: polygon(0 0,
+//         95% 0,
+//         100% 20%,
+//         100% 80%,
+//         95% 100%,
+//         0 100%);
+
+//     h1 {
+//       font-size: 2rem;
+//       font-weight: 700;
+//       line-height: 1.4;
+
+//       .highlight {
+//         color: black;
+//       }
+//     }
+
+//     p {
+//       margin-top: 1.5rem;
+//       color: #3a2f20;
+//       font-size: 1rem;
+//       line-height: 1.7;
+//       max-width: 850px;
+//     }
+
+//     @media (min-width: 768px) {
+//       h1 {
+//         font-size: 3rem;
+//       }
+
+//       p {
+//         font-size: 1.125rem;
+//       }
+//     }
+//   }
+// }
+
+
+
+
+/* curved-hero-section.component.scss */
+/* curved-hero-section.component.scss */
+.box-with-skew {
+  position: relative;
+  background: #f0a500;
+  color: #fff;
+  padding: 2rem;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.box-with-skew::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 100px;
+  height: 100%;
+  background: inherit;
+  transform: skewX(-25deg);
+  transform-origin: top right;
+}

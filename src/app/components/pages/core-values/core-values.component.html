@@ -1,0 +1,100 @@
+<section class="py-20 bg-white dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <!-- Header Section -->
+    <div class="text-center mb-20">
+      <p class="text-amber-500 dark:text-amber-400 font-medium text-lg mb-4">Core Values</p>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-8 leading-tight">
+        Guided by 
+        <span class="text-amber-500 dark:text-amber-400">Faith</span>, 
+        Driven by 
+        <span class="text-amber-500 dark:text-amber-400">Service</span>
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-5xl mx-auto leading-relaxed">
+        At the heart of our mission lies a deep respect for the spiritual significance of Hajj and Umrah. Our core values—integrity, 
+        compassion, reliability, and excellence—shape every interaction and every journey. We are committed to serving each 
+        pilgrim with the care, dedication, and sincerity they deserve on their sacred path.
+      </p>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="relative max-w-7xl mx-auto">
+      <!-- Values Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div 
+          *ngFor="let value of coreValues; let i = index" 
+          class="relative flex flex-col items-center text-center group"
+        >
+          <!-- Icon Container with Curved Lines -->
+          <div class="relative z-10 mb-8">
+            <!-- Curved Dotted Line - Left to Center (for second item) -->
+            <div 
+              *ngIf="i === 1"
+              class="hidden lg:block absolute top-1/2 right-full transform -translate-y-1/2"
+            >
+              <svg width="200" height="80" viewBox="0 0 200 80" class="curved-line-left">
+                <path 
+                  d="M 0 40 Q 100 10 200 40" 
+                  stroke="#d1d5db" 
+                  stroke-width="2" 
+                  stroke-dasharray="8,8" 
+                  fill="none"
+                  class="dark:stroke-gray-600"
+                />
+              </svg>
+            </div>
+
+            <!-- Curved Dotted Line - Center to Right (for second item) -->
+            <div 
+              *ngIf="i === 1"
+              class="hidden lg:block absolute top-1/2 left-full transform -translate-y-1/2"
+            >
+              <svg width="200" height="80" viewBox="0 0 200 80" class="curved-line-right">
+                <path 
+                  d="M 0 40 Q 100 70 200 40" 
+                  stroke="#d1d5db" 
+                  stroke-width="2" 
+                  stroke-dasharray="8,8" 
+                  fill="none"
+                  class="dark:stroke-gray-600"
+                />
+              </svg>
+            </div>
+
+            <!-- Large Circular Background -->
+            <div class="w-32 h-32 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center relative group-hover:scale-105 transition-all duration-300">
+              <!-- Inner Icon Container -->
+              <div class="w-16 h-16 rounded-lg bg-amber-400 dark:bg-amber-500 flex items-center justify-center text-2xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+                {{ value.icon }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-4 max-w-sm">
+            <h3 class="text-xl lg:text-2xl font-bold text-amber-500 dark:text-amber-400 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors duration-300">
+              {{ value.title }}
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm lg:text-base">
+              {{ value.description }}
+            </p>
+          </div>
+
+          <!-- Mobile Connecting Line -->
+          <div 
+            *ngIf="i < coreValues.length - 1"
+            class="lg:hidden mt-8 w-0.5 h-12 bg-gray-200 dark:bg-gray-700"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Decorative Element -->
+    <div class="flex justify-center mt-20">
+      <div class="flex space-x-2">
+        <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+        <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+        <div class="w-2 h-2 bg-amber-400 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+      </div>
+    </div>
+  </div>
+</section>
